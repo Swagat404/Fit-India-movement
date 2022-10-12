@@ -1,0 +1,41 @@
+<html>
+<head><title>form</title>
+<script>
+function b()
+{
+var h=parseFloat(f.h.value);
+var w=parseFloat(f.w.value);
+var bmi=w/(h*h);
+
+f.bmi.value=bmi;
+if(bmi<18.5)
+{f.ct.value="UNDERWEIGHT";}
+else if(bmi<25)
+{f.ct.value="NORMAL";}
+else if(bmi<=30)
+{f.ct.value="OVERWEIGHT";}
+else if(bmi>30)
+{f.ct.value="OBESE";}
+}
+</script></head>
+<body bgcolor="powderblue"><CENTER>
+<BR>
+<H1> CALCULATE YOUR BMI</H1>
+<BR><BR>
+<form name="f" action="">
+<table>
+<tr> <td> NAME </td><td> <input type="textbox" name="nm"></td></tr>
+<tr> <td> GENDER </td><td> <input type="RADIO"  name="gnd" value="m">MALE  <input type="RADIO"  name="gnd" value="f">FEMALE</td></tr>
+<tr> <td> HEIGHT (in mtr)</td><td> <input type="textbox" name="h"></td></tr>
+<tr> <td> WEIGHT(in kg) </td><td> <input type="textbox" name="w"></td></tr></table>
+<br>
+<input type="button" value="Calculate BMI" onClick="b()">
+<br>
+<br>
+<table><tr> <td> BMI </td><td> <input type="textbox" name="bmi" Disabled></td></tr>
+<tr> <td> CATEGORY </td><td> <input type="textbox" name="ct" disabled></td></tr>
+</table>
+</form>
+<a href="index.html"><img src="bt.jpg"></a>
+</CENTER></body>
+</html>
